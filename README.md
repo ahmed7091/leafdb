@@ -41,8 +41,8 @@
 ---
 
 
-<h2 id="initialization">How to initialize LeafDB</h2>
-To setup LeafDB local build, you can clone it using `git CLI` tool by cloning the repo from github, and adding it's tools to your project.
+<h2 id="initialization">Getting Ready ⚡</h2>
+To setup LeafDB local build, you can clone it using git CLI tool by cloning the repo from github, and adding it's tools to your project.
 
 
 1. Go to your project path if you haven't:
@@ -51,10 +51,10 @@ cd path/to/project
 ```
 2. Clone the repo from github using `git CLI`:
 ```bash
-git clone https://github.com/ahmed7091/leafdb.git
+git clone https://github.com/ahmed7091/l-leafdb.git leafdb
 ```
 
-3. go to the leafdb project folder & run the script using `uvicorn`:
+3. go to the leafdb project folder & serve the server locally using `uvicorn`:
 ```bash
 cd ./leafdb/src/leafdb/project
 uvicorn main:app --port 8000 # Specify any port here
@@ -165,6 +165,8 @@ Here is a table of the functions available in LeafDB tools to [use](#basic-usage
 | setport | none   | sync  | Sets the dafault port to send requests to         |
 | view    | GET    | async | returns `data` value if given, else returns all the database. |
 | insert  | POST   | async | inserts the provided dict/object to the database. |
-| delete(del in JS)| DELETE | async | Deletes the field with the provided key |
+| delete  | DELETE | async | Deletes the field with the provided key |
 | edit    | PUT    | asnyc | Changes `key`'s value to `value`             |
 | geturl  | none   | sync  | Returns the current URL of the API |
+
+Note: delete method is `del` in JavaScript to avoid conflicts with the keyword `delete`
